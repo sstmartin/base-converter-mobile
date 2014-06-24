@@ -1,0 +1,51 @@
+<ion-view title="Base Converter">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <br>
+    <h4 style="text-align:center" class="padding">Start typing in any box
+    to instantly convert the value into multiple bases!</h4>
+    <br>
+
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="number" placeholder="01">
+        </label>
+        <button class="button button-small" ng-click="showAlert(0)" style="width:100px">
+          Binary
+        </button>
+      </div>
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="number" placeholder="01234567">
+        </label>
+        <button class="button button-small" ng-click="showAlert(1)" style="width:100px">
+          Octal
+        </button>
+      </div>
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="number" placeholder="0123456789">
+        </label>
+        <button class="button button-small" ng-click="showAlert(2)" style="width:100px">
+         Decimal
+        </button>
+      </div>
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="0123456789ABCDE">
+        </label>
+        <button class="button button-small" ng-click="showAlert(3)" style="width:100px">
+          Hex
+        </button>
+      </div>      
+
+    </div>
+
+  </ion-content>
+</ion-view>
