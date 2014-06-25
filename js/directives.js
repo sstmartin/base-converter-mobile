@@ -1,5 +1,6 @@
 angular.module('starter.directives', [])
 
+//Replacement of textbox values
 .directive('restrict', function($parse) {
     return {
         restrict: 'A',

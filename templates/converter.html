@@ -8,10 +8,10 @@
     to instantly convert the value into multiple bases!</h4>
     <br>
 
-    <div class="list">
+    <div class="list" ng-controller="RealtimeCtrl">
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="number" placeholder="01">
+          <input type="number" ng-model="zer" ng-value="first" ng-change="convert(0)" placeholder="01">
         </label>
         <button class="button button-small" ng-click="showAlert(0)" style="width:100px">
           Binary
@@ -20,7 +20,7 @@
 
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="number" placeholder="01234567">
+          <input type="number" ng-model="oct" ng-value="second" ng-change="convert(1)" placeholder="01234567">
         </label>
         <button class="button button-small" ng-click="showAlert(1)" style="width:100px">
           Octal
@@ -29,7 +29,7 @@
 
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="number" placeholder="0123456789">
+          <input type="number" ng-model="dec" ng-value="third" ng-change="convert(2)" placeholder="0123456789">
         </label>
         <button class="button button-small" ng-click="showAlert(2)" style="width:100px">
          Decimal
@@ -38,14 +38,13 @@
 
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="text" placeholder="0123456789ABCDE">
+          <input type="text" ng-model="hexdis" ng-change="convert(3)" placeholder="Coming in Future Patch!">
         </label>
-        <button class="button button-small" ng-click="showAlert(3)" style="width:100px">
-          Hex
+        <button class="button button-small" style="width:100px">
+          Other
         </button>
-      </div>      
-
+      </div>   
+      <div style="text-align:center">{{err}}</div>  
     </div>
-
   </ion-content>
 </ion-view>
